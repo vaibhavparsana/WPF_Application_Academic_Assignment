@@ -1,0 +1,54 @@
+﻿<Window x:Class="MT_Vaibhav_Parsana.PersonUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MT_Vaibhav_Parsana"
+        mc:Ignorable="d"
+        Title="PersonUpdateWindow" Height="850" Width="1000" Background="#FFFFFFD4">
+    <Grid>
+        <GroupBox HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                  Header="Update Person Information" Margin="10" BorderThickness="1" >
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="lblId" Text="Id" Grid.Row="0" Grid.Column="0"></TextBlock>
+                <TextBox x:Name="txtId" Grid.Row="0" Grid.Column="1" IsReadOnly="True" ></TextBox>
+
+                <TextBlock x:Name="lblName" Text="Name" Grid.Row="1" Grid.Column="0"></TextBlock>
+                <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="1"></TextBox>
+
+                <TextBlock x:Name="lblAddress" Text="Address" Grid.Row="2" Grid.Column="0"></TextBlock>
+                <TextBox x:Name="txtAddress" Grid.Row="2" Grid.Column="1"></TextBox>
+
+                <TextBlock x:Name="lblEmail" Text="Email" Grid.Row="3" Grid.Column="0"></TextBlock>
+                <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="1"></TextBox>
+
+                <TextBlock x:Name="lblAge" Text="Age" Grid.Row="4" Grid.Column="0"></TextBlock>
+                <TextBox x:Name="txtAge" Grid.Row="4" Grid.Column="1"></TextBox>
+
+                <TextBlock x:Name="lblBirthday" Text="Birthday" Grid.Row="5" Grid.Column="0"></TextBlock>
+                <TextBox x:Name="txtBirthday" Grid.Row="5" Grid.Column="1"></TextBox>
+
+
+            </Grid>
+
+
+        </GroupBox>
+        <Button Height="23" Margin="300,330,0,0" Name="UpdatePerson" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="UpdatePerson_Click" >Update</Button>
+        <Button Height="23" Margin="400,330,0,0" Name="CancelUpadtePerson" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="CancelUpdatePerson_Click">Cancel</Button>
+
+    </Grid>
+</Window>

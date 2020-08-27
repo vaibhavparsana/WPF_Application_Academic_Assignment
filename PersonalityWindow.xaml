@@ -1,0 +1,71 @@
+﻿<Window x:Class="MT_Vaibhav_Parsana.PersonalityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MT_Vaibhav_Parsana"
+        mc:Ignorable="d"
+        Title="PersonalityWindow" Height="850" Width="1000" Background="#FFFFFFD4">
+
+    
+
+    <Grid>
+       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="1*"/>
+            <RowDefinition  Height="7*"/>
+            <RowDefinition  Height="2*"/>
+           
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#FCFFD1D1" >
+            <Menu VerticalAlignment="Top">
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_File">
+                    <MenuItem Header="_New" Name="mnuNew" InputGestureText="Ctrl+N"/>
+                    <MenuItem Header="_Save" Name="mnuSave" InputGestureText="Ctrl+S"/>
+                    <Separator/>
+                    <MenuItem Header="E_xit"/>
+                </MenuItem>
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Edit">
+                    <MenuItem Header="_Insert" Name="mnuInsert" InputGestureText="Ctrl+I"/>
+                    <MenuItem Header="_Update" Name="mnuUpdate" InputGestureText="Ctrl+U"/>
+                    <MenuItem Header="_Delete" Name="mnuDelete" InputGestureText="Ctrl+D"/>
+                    <Separator/>
+                    <MenuItem Header="E_xit"/>
+                </MenuItem>
+                <MenuItem HorizontalAlignment="Left" VerticalAlignment="Top" Header="_Help">
+
+                </MenuItem>
+
+            </Menu>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Background="#FFBED3F4" >
+
+            <ListView  Name="listPersonality"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id" Width="120" DisplayMemberBinding="{Binding ID}" />
+                        <GridViewColumn Header="Person ID" Width="120" DisplayMemberBinding="{Binding PersonID}" />
+                        <GridViewColumn Header="Shoe Size" Width="150" DisplayMemberBinding="{Binding ShoeSize}" />
+                        <GridViewColumn Header="Favourite Movie" Width="150" DisplayMemberBinding="{Binding FavouriteMovie}" />
+                        <GridViewColumn Header="Favourite Actor" Width="120" DisplayMemberBinding="{Binding FavouriteActor}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0">
+
+
+           
+            <Button Height="23"  Name="InsertPersonality" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="InsertPersonality_Click" >Insert</Button>
+            <Button Height="23" Name="DeletePersonality" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="DeletePersonality_Click" >Delete</Button>
+            <Button Height="23" Name="UpdatePersonality" VerticalAlignment="Top" HorizontalAlignment="Left" Width="76" Click="UpdatePersonality_Click" >Update</Button>
+            </StackPanel>
+    </Grid>
+</Window>
